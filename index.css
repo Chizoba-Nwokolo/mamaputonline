@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #fafafa;
+}
+
+/* ============================================
+   HEADER - Sticky Navigation
+   ============================================ */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    padding: 0.5rem 1rem;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo styling - positioned at top left */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/* ============================================
+   MOBILE HAMBURGER MENU
+   Visible only on mobile screens
+   ============================================ */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* ============================================
+   NAVIGATION MENU
+   Dropdown for mobile, horizontal for desktop
+   ============================================ */
+.nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: var(--white);
+    padding: 1rem 0;
+    border-top: 2px solid var(--light-color);
+    margin-top: 0.5rem;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Search bar in navigation - same level as menu items */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.search-container input {
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--light-color);
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.search-container input:focus {
+    border-color: var(--primary-color);
+}
+
+.search-container button {
+    padding: 0.6rem 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-container button:hover {
+    background: var(--accent-color);
+}
+
+/* ============================================
+   HERO SECTION
+   30% vertical height, 100% width
+   Split into two vertical partitions
+   ============================================ */
+.hero {
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe4c4 100%);
+    overflow: hidden;
+}
+
+/* Left side of hero - bold invitation text */
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    order: 2;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+}
+
+.cta-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+
+/* Right side of hero - Nigerian dish image */
+.hero-image {
+    flex: 1;
+    min-height: 250px;
+    background: url('https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800&h=600&fit=crop') center/cover no-repeat;
+    position: relative;
+    order: 1;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(255,245,230,0.9));
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   Side panel + Product grid
+   ============================================ */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+/* ============================================
+   SIDE PANEL - Category Navigation
+   Left side panel with food categories
+   ============================================ */
+.side-panel {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.side-panel h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.category-list a:hover,
+.category-list a.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.category-list i {
+    width: 24px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.category-list a:hover i,
+.category-list a.active i {
+    color: var(--white);
+}
+
+/* ============================================
+   PRODUCT GRID
+   4 rows with 4 cards each (16 products total)
+   ============================================ */
+.products-section {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ============================================
+   PRODUCT CARDS
+   Bold product name, quantity, price in Naira
+   ============================================ */
+.product-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    border-color: var(--accent-color);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 1.2rem;
+}
+
+.product-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.product-quantity {
+    display: inline-block;
+    background: var(--light-color);
+    color: var(--dark-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.product-price span {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: 400;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-to-cart:hover {
+    background: var(--primary-color);
+}
+
+/* ============================================
+   FOOTER - Regular footer (not sticky)
+   ============================================ */
+.footer {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer p {
+    font-size: 0.85rem;
+    color: #95a5a6;
+}
+
+/* ============================================
+   TABLET BREAKPOINT (min-width: 768px)
+   ============================================ */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        border: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        min-height: 35vh;
+    }
+
+    .hero-text {
+        order: 1;
+        align-items: flex-start;
+        text-align: left;
+        padding: 3rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        order: 2;
+        min-height: 35vh;
+    }
+
+    .main-content {
+        flex-direction: row;
+    }
+
+    .side-panel {
+        width: 250px;
+        position: sticky;
+        top: 80px;
+        height: fit-content;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   DESKTOP BREAKPOINT (min-width: 1024px)
+   ============================================ */
+@media (min-width: 1024px) {
+    .hero {
+        min-height: 40vh;
+    }
+
+    .hero-text h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .side-panel {
+        width: 280px;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOP BREAKPOINT (min-width: 1200px)
+   4 columns for product cards as requested
+   ============================================ */
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero-text h1 {
+        font-size: 3.8rem;
+    }
+}

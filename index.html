@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamaputonline - Authentic Nigerian Cooked Meals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="base/colors.css">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- ============================================
+         STICKY HEADER
+         Contains logo, navigation, and search
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo at top left -->
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Mamaputonline</span>
+            </a>
+
+            <!-- Hamburger Menu (Mobile Only) -->
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#products"><i class="fas fa-box-open"></i> Products</a>
+                <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
+                <a href="#customer-service"><i class="fas fa-headset"></i> Customer Service</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+
+                <!-- Search Window -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search dishes...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         30%+ vertical height, 100% width
+         Split into two vertical partitions
+         ============================================ -->
+    <section class="hero">
+        <!-- Left Side: Bold invitation text -->
+        <div class="hero-text">
+            <h1>Don't Miss Out!</h1>
+            <p>Experience the authentic taste of Nigeria delivered straight to your doorstep. Fresh, delicious, and cooked with love — just like Mama used to make!</p>
+            <a href="#products" class="cta-button">Order Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Right Side: Nigerian dish image -->
+        <div class="hero-image"></div>
+    </section>
+
+    <!-- ============================================
+         MAIN CONTENT
+         Side Panel + Product Cards Grid
+         ============================================ -->
+    <main class="main-content">
+
+        <!-- Side Panel: Category Navigation -->
+        <aside class="side-panel">
+            <h3><i class="fas fa-list"></i> Menu Categories</h3>
+            <ul class="category-list">
+                <li><a href="#soups" class="active"><i class="fas fa-bowl-food"></i> Soups & Stews</a></li>
+                <li><a href="#rice"><i class="fas fa-bowl-rice"></i> Rice Dishes</a></li>
+                <li><a href="#porridge"><i class="fas fa-pot-food"></i> Porridge</a></li>
+                <li><a href="#sides"><i class="fas fa-plate-wheat"></i> Sides & Extras</a></li>
+                <li><a href="#specials"><i class="fas fa-star"></i> Special Dishes</a></li>
+                <li><a href="#protein"><i class="fas fa-drumstick-bite"></i> Proteins</a></li>
+            </ul>
+        </aside>
+
+        <!-- Products Section -->
+        <section class="products-section" id="products">
+            <h2 class="section-title">Our Delicious Menu</h2>
+
+            <!-- Product Grid: 4 rows, 4 cards each -->
+            <div class="product-grid">
+
+                <!-- Row 1: Nigerian Soups -->
+                <article class="product-card">
+                    <img src="/images/egusi.soup.png" alt="Egusi Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Egusi Soup</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦3,500 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/ewedu.png" alt="Ewedu Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Ewedu Soup</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦2,000 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/Oha_Soup_.png" alt="Ora Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Ora Soup</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦3,800 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/Edikang_Ikong_Soup_Vegetable_Soup.png" alt="Edikaikong Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Edikaikong</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦4,000 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- Row 2: More Soups + Okro -->
+                <article class="product-card">
+                    <img src="/images/Okazi_soup_.png" alt="Okazi Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Okazi Soup</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦3,500 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/ogbono.soup.png" alt="Ogbono Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Ogbono Soup</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦3,200 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/okro.soup.png" alt="Okro Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Okro Soup</h3>
+                        <span class="product-quantity">1 Litre</span>
+                        <div class="product-price">₦2,500 <span>per litre</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/jollof rice.png" alt="Jollof Rice" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Jollof Rice</h3>
+                        <span class="product-quantity">1 Plate</span>
+                        <div class="product-price">₦2,500 <span>per plate</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- Row 3: Rice & Porridge -->
+                <article class="product-card">
+                    <img src="/images/fried.rice.png" alt="Fried Rice" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Fried Rice</h3>
+                        <span class="product-quantity">1 Plate</span>
+                        <div class="product-price">₦2,800 <span>per plate</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/porridge.png" alt="Porridge Yam" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Porridge Yam</h3>
+                        <span class="product-quantity">1 Plate</span>
+                        <div class="product-price">₦2,000 <span>per plate</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/porridge_Beans.png" alt="Porridge Beans" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Porridge Beans</h3>
+                        <span class="product-quantity">1 Plate</span>
+                        <div class="product-price">₦1,800 <span>per plate</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/fried plantain.png" alt="Fried Plantain" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Fried Plantain</h3>
+                        <span class="product-quantity">5 Pieces</span>
+                        <div class="product-price">₦1,500 <span>per serving</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- Row 4: Special Dishes & Protein -->
+                <article class="product-card">
+                    <img src="/images/Abacha_African_salad_.png" alt="Abacha" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Abacha (African Salad)</h3>
+                        <span class="product-quantity">1 Plate</span>
+                        <div class="product-price">₦2,200 <span>per plate</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/Nkwobi_.png" alt="Nkwobi" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Nkwobi</h3>
+                        <span class="product-quantity">1 Portion</span>
+                        <div class="product-price">₦3,500 <span>per portion</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/fried chicken.png" alt="Fried Chicken" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Fried Chicken</h3>
+                        <span class="product-quantity">2 Pieces</span>
+                        <div class="product-price">₦2,500 <span>per serving</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="/images/Goatmeat_Peppersoup.png" alt="Pepper Soup" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Goat Meat Pepper Soup</h3>
+                        <span class="product-quantity">1 Bowl</span>
+                        <div class="product-price">₦3,000 <span>per bowl</span></div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         STICKY FOOTER
+         Social Media Links
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+                <a href="https://facebook.com/mamaputonline" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/mamaputonline" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/mamaputonline" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://wa.me/2348012345678" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://youtube.com/mamaputonline" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p> Mamaputonline. All rights reserved. | Authentic Nigerian Cuisine</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         Mobile Menu Toggle Functionality
+         ============================================ -->
+    <script src="script.js"></script>
+
+</body>
+</html>

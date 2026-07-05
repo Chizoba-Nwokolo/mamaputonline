@@ -1,0 +1,9 @@
+I am a new software developer and I want you to help me build a landing page of an online take-away Nigerian cooked meal restaurant. The name should be Mamaputonline. The landing page should have a logo at the top left hand corner of the header, make the header sticky. Menu bar should have the following items Products, Services, Customer Service, Contact Us and a search window on the same level.. 
+
+The hero section should occupy at least 30% of the vertical length of the page and 100% of the breathe of the page. The hero section should be vertically partitioned into two, one side of the hero section should display an image of a steaming, deliciously-cooked Nigerian dish / soup (with the right aspect ratio and with the right pixelization). The left side of the hero section should have boldly-written words in large print, lettering inviting people to not miss the opportunity to buy from the online store. 
+
+Mamaputonline sells different types of cooked soups like egusi, ewedu, ora, edikaikong, okazi, ogbono and okro. It also sells jellof rice, fried rice, porridge yam, porridge beans , fried plantain, abacha,nkwobi, fried chicken. There should be a side panel on the left of the main section with items listed there and connecting users to the main section / product cards. 
+
+The product cards should have 4 rows on the right side of the main page, each row should have at least 4 product cards.The product cards should identify the product boldly, the quantity and price in naira with images of the food. 
+
+The landing page should have a footer that has all the social media links. Make the footer sticky Build this using HTML and CSS and using mobile first approach for responsiveness. It should be very responsive and the mobile screen size should have a hamburger icon and drop down menu. Insert comments in the codes for easy comprehension.
